@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net7.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <StartupObject>BlockJSAlg.App</StartupObject>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <PackageId>$(ABlockJS)</PackageId>
+    <Title>ABlockJS</Title>
+    <PlatformTarget>x64</PlatformTarget>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="SDSLite" Version="2.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Reference Include="eBayesMSTClass">
+      <HintPath>..\..\..\eBayesClass\bin\Debug\net5.0\eBayesMSTClass.dll</HintPath>
+    </Reference>
+    <Reference Include="ILNumerics">
+      <HintPath>..\..\..\MacroTrial\MacroTrial\bin\Debug\ILNumerics.dll</HintPath>
+    </Reference>
+    <Reference Include="MSTClass">
+      <HintPath>..\..\MSTClass\bin\Debug\net5.0\MSTClass.dll</HintPath>
+    </Reference>
+    <Reference Include="MSTClass_ABlockJS">
+      <HintPath>..\..\..\MSTClass_ABlockJS\bin\Debug\net7.0-windows\MSTClass_ABlockJS.dll</HintPath>
+    </Reference>
+    <Reference Include="NMath">
+      <HintPath>..\..\..\MacroTrial\MacroTrial\bin\Debug\NMath.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+</Project>

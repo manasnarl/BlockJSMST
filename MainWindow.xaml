@@ -1,0 +1,28 @@
+﻿<Window x:Class="BlockJSAlg.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BlockJSAlg"
+        mc:Ignorable="d"
+        Title="ABlockJS" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition  Height="*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="0" Content="Input"/>
+        <Label Grid.Row="0" Grid.Column="1" Content="Process"/>
+        <Label Grid.Row="0" Grid.Column="2" Content="Output"/>
+
+        <Button Content="Click to process"  Click="Button_Click" Grid.Column="1" Grid.Row="1"/>
+        <ListBox Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=512}" x:Name="lstInput" Grid.Column="0" />
+        <ListBox Grid.Row="1" d:ItemsSource="{d:SampleData ItemCount=512}" x:Name="lstOutput" Grid.Column="2" />
+
+    </Grid>
+</Window>
